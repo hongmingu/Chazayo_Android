@@ -7,28 +7,62 @@
     android:orientation="vertical"
     tools:context=".FamilyActivity">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        >
+        android:background="@color/colorMain"
+        android:layout_gravity="center">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="차자요"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            android:lineSpacingExtra="8sp">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp">
+
+    </Space>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal">
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/family_search_bar"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="48dp">
+            android:id="@+id/familySearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="18dp"
+            android:hint="이름을 입력하세요">
+
         </androidx.appcompat.widget.AppCompatEditText>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/familySearchButton"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp"
 
-        <androidx.coordinatorlayout.widget.CoordinatorLayout
-            android:id="@+id/family_search_button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="#14ff14">
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/ic_search_24px">
 
-        </androidx.coordinatorlayout.widget.CoordinatorLayout>
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.AppCompatImageView>
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp">
+
+    </Space>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/family_recyclerview"
+        android:id="@+id/familyRecyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

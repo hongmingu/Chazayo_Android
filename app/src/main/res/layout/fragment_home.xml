@@ -5,117 +5,396 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorMain"
+        android:layout_gravity="center">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="차자요"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            android:lineSpacingExtra="8sp">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp">
+
+    </Space>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="18dp"
+            android:hint="이름을 입력하세요">
+
+        </androidx.appcompat.widget.AppCompatEditText>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp"
+
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/ic_search_24px">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp">
+
+    </Space>
+
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:orientation="vertical"
-
-        android:weightSum="3">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:weightSum="3">
-
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:id="@+id/message_family"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#88E04DD0">
-
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:background="#6684DD">
-
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:background="#631670">
-
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp">
+            </Space>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_gold">
+            </ImageView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+            </Space>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="5sp"
+                android:text="가족"
+                />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <Space
+            android:layout_width="21dp"
+            android:layout_height="match_parent"></Space>
+
+
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:weightSum="3">
-
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#880C2527">
-
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:background="#BDB228">
-
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:background="#855391">
-
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp">
+            </Space>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_gold">
+            </ImageView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+            </Space>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="5sp"
+                android:text="친구"
+                />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <Space
+            android:layout_width="21dp"
+            android:layout_height="match_parent"></Space>
+
+
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:weightSum="3">
-
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#8836DAE9">
-
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:background="#74672C">
-
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:background="#631670">
-
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp">
+            </Space>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_gold">
+            </ImageView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+            </Space>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="5sp"
+                android:text="은사"
+                />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp"></Space>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp">
+            </Space>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_gold">
+            </ImageView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+            </Space>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="5sp"
+                android:text="새 인맥"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Space
+            android:layout_width="21dp"
+            android:layout_height="match_parent"></Space>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp">
+            </Space>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_gold">
+            </ImageView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+            </Space>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="5sp"
+                android:text="새 인연"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Space
+            android:layout_width="21dp"
+            android:layout_height="match_parent"></Space>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp">
+            </Space>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_gold">
+            </ImageView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+            </Space>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="5sp"
+                android:text="군대"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp"></Space>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp">
+            </Space>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_gold">
+            </ImageView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+            </Space>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="5sp"
+                android:text="나쁜 사람"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Space
+            android:layout_width="21dp"
+            android:layout_height="match_parent"></Space>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp">
+            </Space>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_gold">
+            </ImageView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+            </Space>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="5sp"
+                android:text="칭찬"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Space
+            android:layout_width="21dp"
+            android:layout_height="match_parent"></Space>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp">
+            </Space>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_gold">
+            </ImageView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+            </Space>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="5sp"
+                android:text="영상 채널"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
 </androidx.appcompat.widget.LinearLayoutCompat>

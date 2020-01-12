@@ -68,9 +68,9 @@ public class FamilyActivity extends BaseActivity implements View.OnClickListener
 
     public void setViews(){
 
-        recyclerView = findViewById(R.id.family_recyclerview);
+        recyclerView = findViewById(R.id.familyRecyclerview);
 
-        searchBar = findViewById(R.id.family_search_bar);
+        searchBar = findViewById(R.id.familySearchBar);
 
     }
 
@@ -78,8 +78,7 @@ public class FamilyActivity extends BaseActivity implements View.OnClickListener
     public void onClick(View view) {
 
         switch (view.getId()){
-            case R.id.family_search_button:
-
+            case R.id.familySearchButton:
                 searchUser(searchBar.getText().toString());
 
                 break;

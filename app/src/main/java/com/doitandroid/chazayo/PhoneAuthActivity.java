@@ -1,7 +1,6 @@
 package com.doitandroid.chazayo;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -153,7 +152,7 @@ public class PhoneAuthActivity extends BaseActivity {
 
 
     public void goToSignUpPage(){
-        Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
+        Intent intent = new Intent(getApplicationContext(), SignUpDefaultActivity.class);
         intent.putExtra("phone",phone);
         startActivity(intent);
     }

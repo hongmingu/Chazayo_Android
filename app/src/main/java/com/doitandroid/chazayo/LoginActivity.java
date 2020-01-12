@@ -17,9 +17,9 @@ public class LoginActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        loginButton = findViewById(R.id.loginButton);
-        signUpButton = findViewById(R.id.signUpButton);
-        pwFindButton = findViewById(R.id.pwFindButton);
+        loginButton = findViewById(R.id.loginLoginButton);
+        signUpButton = findViewById(R.id.loginSignUpButton);
+        pwFindButton = findViewById(R.id.loginFindPasswordButton);
 
         //회원가입 버튼을 눌렀을 때 전화번호로 인증하러 보내는 메소드
         signUpButton.setOnClickListener(new View.OnClickListener() {
@@ -35,9 +35,7 @@ public class LoginActivity extends BaseActivity {
             public void onClick(View v) {
 
                 SharedPreferences sp = getSharedPreferences("sp_login", MODE_PRIVATE);
-
                 SharedPreferences.Editor editor = sp.edit();
-
                 editor.putString("is_logged_in", "positive");
                 editor.commit();
 
