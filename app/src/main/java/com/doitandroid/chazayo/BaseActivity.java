@@ -11,6 +11,9 @@ import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.doitandroid.chazayo.rest.APIClient;
+import com.doitandroid.chazayo.rest.APIInterface;
+
 public class BaseActivity extends AppCompatActivity {
     AppCompatDialog progressDialog;
 
@@ -76,6 +79,16 @@ public class BaseActivity extends AppCompatActivity {
         if (progressDialog != null && progressDialog.isShowing()) {
             progressDialog.dismiss();
         }
+    }
+
+    public APIInterface getAPIInterface() {
+
+        // rest/APIClient 클래스에 보면 getCLient 함수가 있다.
+        // 그 함수에서 retrofit 를 만들어서 받아온 후 거기에 create를 넣어주는 것이다.
+        // 인터넷에서 보고 편리해서 이렇게 씀. 더 좋은 방법이 있다면 바꿔서 쓰자!!
+
+        APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
+        return apiInterface;
     }
 
 }
