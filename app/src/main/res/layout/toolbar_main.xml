@@ -1,6 +1,6 @@
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/toolbar_all_tb"
+    android:id="@+id/toolbarAll"
     android:layout_width="match_parent"
     android:layout_height="48dp"
     android:elevation="4dp"
@@ -14,12 +14,13 @@
         android:weightSum="4"
         android:orientation="horizontal">
         <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/toolbarHome"
             android:background="@drawable/bg_gold"
 
 
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent">
+            android:layout_height="48dp">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="24dp"
@@ -32,12 +33,12 @@
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:background="@drawable/bg_gold"
 
-            android:id="@+id/toolbar_message"
+            android:id="@+id/toolbarMessage"
 
 
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent">
+            android:layout_height="48dp">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="24dp"
@@ -50,12 +51,12 @@
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:background="@drawable/bg_gold"
 
-            android:id="@+id/toolbar_noti"
+            android:id="@+id/toolbarNoti"
 
 
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent">
+            android:layout_height="48dp">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="24dp"
@@ -68,10 +69,10 @@
             android:background="@drawable/bg_gold"
 
 
-            android:id="@+id/toolbar_my"
+            android:id="@+id/toolbarMy"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent">
+            android:layout_height="48dp">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="24dp"

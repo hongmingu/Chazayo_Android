@@ -33,6 +33,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     }
 
     public void setViews(ViewGroup rootView) {
+        rootView.findViewById(R.id.homeFamily).setOnClickListener(this);
     }
 
     public void setActivity(){
@@ -41,7 +42,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.home_family:
+            case R.id.homeFamily:
                 ((MainActivity) activity).openFamilyActivity();
                 break;
             default:

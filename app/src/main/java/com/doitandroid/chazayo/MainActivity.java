@@ -1,8 +1,6 @@
 package com.doitandroid.chazayo;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -10,12 +8,10 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.doitandroid.chazayo.fragment.HomeFragment;
-import com.doitandroid.chazayo.fragment.MessageFragment;
 import com.doitandroid.chazayo.rest.APIClient;
 import com.doitandroid.chazayo.rest.APIInterface;
 import com.doitandroid.chazayo.util.SingletonHolder;
@@ -27,7 +23,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private static final String TAG = "MainActivity";
 
     Toolbar toolbar;
-    CoordinatorLayout toolbar_my, toolbar_noti, toolbar_message;
 
     ArrayList<Fragment> fragmentArrayList, fragmentManagerArrayList;
     Fragment fragmentHome, fragmentHome2;
@@ -65,22 +60,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private void setFragments() {
         fragmentHome = new HomeFragment();
-        fragmentHome2 = new MessageFragment();
         fragmentManager = getSupportFragmentManager();
-
         FragmentTransaction fragmentTransaction;
         fragmentTransaction = fragmentManager.beginTransaction();
-
         fragmentTransaction.add(R.id.main_fragment_frame, fragmentHome).commit();
-
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.main_fragment_frame, fragmentHome2).commit();
-
         showFragment(fragmentHome);
-
-
-
-
     }
 
 
@@ -113,48 +97,45 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     public void setToolbar(){
-        toolbar = findViewById(R.id.toolbar_all_tb);
+        toolbar = findViewById(R.id.toolbarAll);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
     }
 
     public void setViews(){
-        toolbar_my = findViewById(R.id.toolbar_my);
-        toolbar_my.setOnClickListener(this);
-
-        toolbar_noti = findViewById(R.id.toolbar_noti);
-        toolbar_noti.setOnClickListener(this);
-
-        toolbar_message = findViewById(R.id.toolbar_message);
-        toolbar_message.setOnClickListener(this);
+        findViewById(R.id.toolbarHome).setOnClickListener(this);
+        findViewById(R.id.toolbarMessage).setOnClickListener(this);
+        findViewById(R.id.toolbarNoti).setOnClickListener(this);
+        findViewById(R.id.toolbarMy).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.toolbar_my:
+            case R.id.toolbarHome:
+                showFragment(fragmentHome);
+                break;
+            case R.id.toolbarMy:
                 login_check();
 
                 break;
 
-            case R.id.toolbar_noti:
+            case R.id.toolbarNoti:
                 Toast.makeText(getApplicationContext(), "logout", Toast.LENGTH_SHORT).show();
 
                 SharedPreferences sp = getSharedPreferences("sp_login", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
                 editor.putString("is_logged_in", "negative");
                 editor.commit();
-                showFragment(fragmentHome2);
                 break;
-            case R.id.toolbar_message:
+            case R.id.toolbarMessage:
                 Toast.makeText(getApplicationContext(), "login", Toast.LENGTH_SHORT).show();
 
                 SharedPreferences sp1 = getSharedPreferences("sp_login", MODE_PRIVATE);
                 SharedPreferences.Editor editor1 = sp1.edit();
                 editor1.putString("is_logged_in", "positive");
                 editor1.commit();
-                showFragment(fragmentHome);
                 break;
 
             default:
