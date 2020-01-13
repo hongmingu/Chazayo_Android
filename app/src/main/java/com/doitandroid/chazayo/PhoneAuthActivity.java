@@ -38,7 +38,7 @@ public class PhoneAuthActivity extends BaseActivity {
 
 
         mAuth = FirebaseAuth.getInstance();
-
+/*
         editTextPhone = findViewById(R.id.editTextPhone);
         editTextCode = findViewById(R.id.editTextCode);
 
@@ -56,7 +56,7 @@ public class PhoneAuthActivity extends BaseActivity {
             public void onClick(View v) {
                 verifySignIn();
             }
-        });
+        });*/
 
 
     }
