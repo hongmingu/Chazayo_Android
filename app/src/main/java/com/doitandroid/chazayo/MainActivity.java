@@ -12,11 +12,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.doitandroid.chazayo.fragment.HomeFragment;
-import com.doitandroid.chazayo.rest.APIClient;
-import com.doitandroid.chazayo.rest.APIInterface;
 import com.doitandroid.chazayo.util.SingletonHolder;
 
-import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
     // BaseActivity 를 만들어 액티비티들이 공통으로 자주 쓸만한 함수를 정의한다.

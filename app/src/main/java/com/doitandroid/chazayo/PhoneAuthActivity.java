@@ -21,7 +21,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class PhoneAuthActivity extends BaseActivity {
+public class PhoneAuthActivity extends BaseActivity implements View.OnClickListener {
     FirebaseAuth mAuth;
     String codeSent;
     String phoneNumber;
@@ -35,9 +35,11 @@ public class PhoneAuthActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_auth);
 
+        setViews();
 
 
-        mAuth = FirebaseAuth.getInstance();
+
+//        mAuth = FirebaseAuth.getInstance();
 /*
         editTextPhone = findViewById(R.id.editTextPhone);
         editTextCode = findViewById(R.id.editTextCode);
@@ -80,7 +82,7 @@ public class PhoneAuthActivity extends BaseActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(getApplicationContext(),"인증성공",Toast.LENGTH_LONG).show();
-                            goToSignUpPage();
+                            goToSignUpDefaultActivity();
                             // ...
                         } else {
 
@@ -151,9 +153,24 @@ public class PhoneAuthActivity extends BaseActivity {
     };
 
 
-    public void goToSignUpPage(){
+    public void goToSignUpDefaultActivity(){
         Intent intent = new Intent(getApplicationContext(), SignUpDefaultActivity.class);
-        intent.putExtra("phone",phone);
+//        intent.putExtra("phone",phone);
         startActivity(intent);
+    }
+
+    public void setViews(){
+        findViewById(R.id.phoneAuthNextButton).setOnClickListener(this);
+    }
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.phoneAuthNextButton:
+                goToSignUpDefaultActivity();
+                break;
+            default:
+                break;
+        }
+
     }
 }

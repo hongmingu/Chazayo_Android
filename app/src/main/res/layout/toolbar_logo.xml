@@ -1,0 +1,18 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/colorMain"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="차자요"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:lineSpacingExtra="8sp">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

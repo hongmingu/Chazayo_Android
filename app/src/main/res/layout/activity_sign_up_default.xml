@@ -1,9 +1,442 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SignUpDefaultActivity">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <include layout="@layout/toolbar_logo"></include>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp"></Space>
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="288dp"
+            android:layout_height="48dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="8sp"
+                android:text="기본정보입력"
+                />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_gravity="center"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp">
+
+                </Space>
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="19sp"
+                        android:textColor="#060606"
+                        android:lineSpacingExtra="7sp"
+                        android:text="이 름"
+                        />
+
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp">
+
+                </Space>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:padding="0dp"
+                    android:layout_width="84dp"
+                    android:layout_height="28dp"
+                    android:hint="이름"
+                    android:backgroundTint="@color/colorTransparent">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp">
+
+                </Space>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:padding="0dp"
+                    android:layout_width="84dp"
+                    android:layout_height="28dp"
+                    android:hint="추가 이름"
+
+                    android:backgroundTint="@color/colorTransparent">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"></Space>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="8sp"
+                    android:textColor="#0900ff"
+                    android:lineSpacingExtra="4sp"
+                    android:text="이름에 변경사항이 있는 경우 과거
+사용했던 이름까지 기재합니다."
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp">
+
+                </Space>
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="19sp"
+                        android:textColor="#060606"
+                        android:lineSpacingExtra="7sp"
+                        android:text="성 별"
+                        />
+
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp">
+
+                </Space>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="84dp"
+                    android:layout_height="28dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorMain">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:lineSpacingExtra="5sp"
+                            android:text="남"
+                            />
+
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:lineSpacingExtra="5sp"
+                            android:text="여"
+                            />
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp">
+
+        </Space>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_gravity="center_horizontal"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textColor="#060606"
+                android:lineSpacingExtra="7sp"
+                android:text="생년월일"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp">
+
+        </Space>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_gravity="center_horizontal"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textColor="#060606"
+                android:lineSpacingExtra="7sp"
+                android:text="출생지"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp">
+
+        </Space>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_gravity="center_horizontal"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textColor="#060606"
+                android:lineSpacingExtra="7sp"
+                android:text="가족관계"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp">
+
+        </Space>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_gravity="center_horizontal"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textColor="#060606"
+                android:lineSpacingExtra="7sp"
+                android:text="결혼여부"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+            </Space>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="84dp"
+                android:layout_height="28dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorMain">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:lineSpacingExtra="5sp"
+                        android:text="미혼"
+                        />
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:lineSpacingExtra="5sp"
+                        android:text="결혼"
+                        />
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp">
+
+        </Space>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_gravity="center_horizontal"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textColor="#060606"
+                android:lineSpacingExtra="7sp"
+                android:text="연락처"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></Space>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:gravity="center_vertical"
+
+                android:padding="0dp"
+                android:layout_width="288dp"
+                android:layout_height="28dp"
+                android:backgroundTint="@color/colorTransparent"
+                android:hint="연락처입력창입니다. 다른 모양으로 구현 예정">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp">
+
+        </Space>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_gravity="center_horizontal"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textColor="#060606"
+                android:lineSpacingExtra="7sp"
+                android:text="연락처2"
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></Space>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:gravity="center_vertical"
+                android:padding="0dp"
+                android:layout_width="288dp"
+                android:layout_height="28dp"
+                android:backgroundTint="@color/colorTransparent"
+                android:hint="연락처입력창입니다.">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp"></Space>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textColor="#060606"
+                android:lineSpacingExtra="7sp"
+                android:text="프로필 사진 등록"
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></Space>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:gravity="center"
+                android:padding="0dp"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:backgroundTint="@color/colorTransparent"
+                android:hint="여기를 클릭하면 사진등록">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp"></Space>
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_gravity="center"
+            android:id="@+id/phoneAuthNextButton"
+            android:layout_width="132dp"
+
+            android:layout_height="72dp"
+            android:background="@drawable/bg_gold_radius">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="#060606"
+                android:lineSpacingExtra="8sp"
+                android:text="다음"
+                />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp"></Space>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>
